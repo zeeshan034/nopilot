@@ -1,0 +1,26 @@
+[Eagle]
+Version="06 01 00"
+Platform="Mac OS X"
+Serial="6E069B2F23-LSR-WLM-1CP"
+Globals="Globals"
+Desktop="Desktop"
+
+[Globals]
+AutoSaveProject=1
+UsedLibrary="/Applications/EAGLE-6.1.0/lbr/resistor.lbr"
+UsedLibrary="/Users/kan015/Dropbox/Documents/autopilot/hw/lib/frames.lbr"
+UsedLibrary="/Users/kan015/Dropbox/Documents/autopilot/hw/lib/stm32.lbr"
+UsedLibrary="/Applications/EAGLE/lbr/con-berg.lbr"
+UsedLibrary="/Applications/EAGLE/lbr/con-harting-ml.lbr"
+UsedLibrary="/Applications/EAGLE/lbr/pot.lbr"
+UsedLibrary="/Applications/EAGLE/lbr/solpad.lbr"
+
+[Win_1]
+Type="Control Panel"
+Loc="67 88 1919 1131"
+State=1
+Number=0
+
+[Desktop]
+Screen="3840 1200"
+Window="Win_1"
