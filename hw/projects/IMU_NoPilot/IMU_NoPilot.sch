@@ -3740,7 +3740,7 @@ Metric Code Size 5664</description>
 <wire x1="215.265" y1="20.05" x2="256.54" y2="20.05" width="0.1016" layer="94"/>
 <wire x1="235" y1="7.9" x2="235" y2="3.8" width="0.1016" layer="94"/>
 <wire x1="161.3" y1="11" x2="215.2" y2="11" width="0.1016" layer="94"/>
-<text x="162.56" y="20.32" size="2.794" layer="94">OPPFINNERIERT</text>
+<text x="162.56" y="20.32" size="2.794" layer="94">OPPFINNERIET</text>
 <text x="229" y="21" size="1.5" layer="94">&gt;SHEET_NAME</text>
 <text x="231" y="17" size="1.5" layer="94">&gt;DRAWING_NAME</text>
 <text x="216" y="9" size="1.5" layer="94">Saved:</text>
