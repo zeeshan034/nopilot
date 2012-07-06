@@ -6305,10 +6305,10 @@ type RDH, grid 15 mm</description>
 <part name="U1" library="stm32" deviceset="STM32F4XX_64" device=""/>
 <part name="C1" library="resistor" deviceset="C-EU" device="C0805" value="2.2u"/>
 <part name="C2" library="resistor" deviceset="C-EU" device="C0805" value="2.2u"/>
-<part name="C3" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
-<part name="C4" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
-<part name="C5" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
-<part name="C6" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
+<part name="C3" library="resistor" deviceset="C-EU" device="C0402" value="100n"/>
+<part name="C4" library="resistor" deviceset="C-EU" device="C0402" value="100n"/>
+<part name="C5" library="resistor" deviceset="C-EU" device="C0402" value="100n"/>
+<part name="C6" library="resistor" deviceset="C-EU" device="C0402" value="100n"/>
 <part name="U$2" library="frames" deviceset="A4_L" device="">
 <attribute name="SHEET_NAME" value="stm32 Pwr/Rst"/>
 </part>
@@ -6316,16 +6316,16 @@ type RDH, grid 15 mm</description>
 <attribute name="SHEET_NAME" value="STM32 IO Ports"/>
 </part>
 <part name="XTAL1" library="misc_devices" deviceset="XTAL_5X3P2" device=""/>
-<part name="C8" library="resistor" deviceset="C-EU" device="C0805"/>
-<part name="C7" library="resistor" deviceset="C-EU" device="C0805"/>
+<part name="C8" library="resistor" deviceset="C-EU" device="C0402"/>
+<part name="C7" library="resistor" deviceset="C-EU" device="C0402"/>
 <part name="U$5" library="frames" deviceset="A4_L" device="">
 <attribute name="SHEET_NAME" value="Interfaces"/>
 </part>
 <part name="RST" library="misc_devices" deviceset="OMRON_B3FS_1000" device=""/>
 <part name="BOOT" library="misc_devices" deviceset="OMRON_B3FS_1000" device=""/>
-<part name="R1" library="resistor" deviceset="R-EU_" device="R0805" value="10k"/>
-<part name="R2" library="resistor" deviceset="R-EU_" device="R0805" value="10k"/>
-<part name="C9" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
+<part name="R1" library="resistor" deviceset="R-EU_" device="R0402" value="10k"/>
+<part name="R2" library="resistor" deviceset="R-EU_" device="R0402" value="10k"/>
+<part name="C9" library="resistor" deviceset="C-EU" device="C0402" value="100n"/>
 <part name="U$8" library="frames" deviceset="A4_L" device="">
 <attribute name="SHEET_NAME" value="Accl / Mag"/>
 </part>
@@ -6340,22 +6340,22 @@ type RDH, grid 15 mm</description>
 </part>
 <part name="U2" library="sensors" deviceset="LSM303DLHC" device=""/>
 <part name="C10" library="resistor" deviceset="C-EU" device="C0805" value="4.7u"/>
-<part name="C12" library="resistor" deviceset="C-EU" device="C0805" value="0.22u"/>
-<part name="C11" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
+<part name="C12" library="resistor" deviceset="C-EU" device="C0402" value="0.22u"/>
+<part name="C11" library="resistor" deviceset="C-EU" device="C0402" value="100n"/>
 <part name="U3" library="sensors" deviceset="LSM330DLC" device=""/>
-<part name="C15" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
-<part name="C14" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
-<part name="C13" library="resistor" deviceset="C-EU" device="C0805" value="10n (25V)"/>
+<part name="C15" library="resistor" deviceset="C-EU" device="C0402" value="100n"/>
+<part name="C14" library="resistor" deviceset="C-EU" device="C0402" value="100n"/>
+<part name="C13" library="resistor" deviceset="C-EU" device="C0402" value="10n (25V)"/>
 <part name="U4" library="sensors" deviceset="MPL3115A2" device=""/>
-<part name="C17" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
-<part name="C16" library="resistor" deviceset="C-EU" device="C0805" value="100n"/>
+<part name="C17" library="resistor" deviceset="C-EU" device="C0402" value="100n"/>
+<part name="C16" library="resistor" deviceset="C-EU" device="C0402" value="100n"/>
 <part name="U5" library="sensors" deviceset="MTK-3329" device=""/>
 <part name="L1" library="resistor" deviceset="R-EU_" device="R0603" value="MLB-160808-0060PQ"/>
-<part name="R3" library="resistor" deviceset="R-EU_" device="R0805" value="330R"/>
-<part name="R4" library="resistor" deviceset="R-EU_" device="R0805" value="330R"/>
+<part name="R3" library="resistor" deviceset="R-EU_" device="R0402" value="330R"/>
+<part name="R4" library="resistor" deviceset="R-EU_" device="R0402" value="330R"/>
 <part name="C19" library="resistor" deviceset="C-EU" device="C0805" value="1u"/>
 <part name="C18" library="resistor" deviceset="C-EU" device="C0805" value="1u"/>
-<part name="C20" library="resistor" deviceset="C-EU" device="C0805" value="10n"/>
+<part name="C20" library="resistor" deviceset="C-EU" device="C0402" value="10n"/>
 <part name="U$16" library="frames" deviceset="A4_L" device="">
 <attribute name="SHEET_NAME" value="Power"/>
 </part>
@@ -6363,10 +6363,10 @@ type RDH, grid 15 mm</description>
 <part name="C21" library="resistor" deviceset="C-EU" device="C0805" value="4u7"/>
 <part name="C22" library="resistor" deviceset="C-EU" device="C0805" value="10u"/>
 <part name="P1" library="connectors" deviceset="USB_MICRO_AB" device=""/>
-<part name="R5" library="resistor" deviceset="R-EU_" device="R0805" value="100"/>
-<part name="R6" library="resistor" deviceset="R-EU_" device="R0805" value="100"/>
-<part name="R7" library="resistor" deviceset="R-EU_" device="R0805" value="4k7"/>
-<part name="R8" library="resistor" deviceset="R-EU_" device="R0805" value="4k7"/>
+<part name="R5" library="resistor" deviceset="R-EU_" device="R0402" value="100"/>
+<part name="R6" library="resistor" deviceset="R-EU_" device="R0402" value="100"/>
+<part name="R7" library="resistor" deviceset="R-EU_" device="R0402" value="4k7"/>
+<part name="R8" library="resistor" deviceset="R-EU_" device="R0402" value="4k7"/>
 <part name="P2" library="connectors" deviceset="ST_LINK" device=""/>
 <part name="P3" library="connectors" deviceset="PWR3" device=""/>
 </parts>
