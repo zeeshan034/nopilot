@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -607,7 +607,7 @@
 <text x="-2.54" y="4.445" size="1.27" layer="25">&gt;NAME</text>
 <text x="-3.175" y="-5.715" size="1.27" layer="27">&gt;VALUE</text>
 </package>
-<package name="ST_LINK">
+<package name="PINLIST5_2P54">
 <pad name="P$1" x="0" y="0" drill="0.8" shape="square"/>
 <pad name="P$2" x="0" y="2.54" drill="0.8"/>
 <pad name="P$3" x="0" y="5.08" drill="0.8"/>
@@ -945,6 +945,17 @@
 <wire x1="0" y1="0" x2="7.62" y2="0" width="0.254" layer="94"/>
 <wire x1="0" y1="20.32" x2="7.62" y2="20.32" width="0.254" layer="94"/>
 <text x="0" y="22.86" size="1.778" layer="94">&gt;NAME</text>
+</symbol>
+<symbol name="SPI_EXT">
+<wire x1="0" y1="15.24" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="15.24" x2="2.54" y2="15.24" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
+<pin name="CLK" x="-2.54" y="2.54" visible="pin" length="short"/>
+<pin name="MOSI" x="-2.54" y="5.08" visible="pin" length="short"/>
+<pin name="MISO" x="-2.54" y="7.62" visible="pin" length="short"/>
+<pin name="NSS" x="-2.54" y="10.16" visible="pin" length="short"/>
+<pin name="GND" x="-2.54" y="12.7" visible="pin" length="short"/>
+<text x="0" y="-2.54" size="1.27" layer="94">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1430,7 +1441,7 @@
 <gate name="G$1" symbol="ST_LINK" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="ST_LINK">
+<device name="" package="PINLIST5_2P54">
 <connects>
 <connect gate="G$1" pin="!RST" pad="P$5"/>
 <connect gate="G$1" pin="GND" pad="P$3"/>
@@ -1454,6 +1465,25 @@
 <connect gate="G$1" pin="GND" pad="P$1"/>
 <connect gate="G$1" pin="VDD_3P3V" pad="P$3"/>
 <connect gate="G$1" pin="VDD_5P0V" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPI_EXT">
+<gates>
+<gate name="G$1" symbol="SPI_EXT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PINLIST5_2P54">
+<connects>
+<connect gate="G$1" pin="CLK" pad="P$1"/>
+<connect gate="G$1" pin="GND" pad="P$5"/>
+<connect gate="G$1" pin="MISO" pad="P$3"/>
+<connect gate="G$1" pin="MOSI" pad="P$2"/>
+<connect gate="G$1" pin="NSS" pad="P$4"/>
 </connects>
 <technologies>
 <technology name=""/>

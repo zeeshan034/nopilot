@@ -6168,6 +6168,18 @@ type RDH, grid 15 mm</description>
 <wire x1="-1.27" y1="6.35" x2="-1.27" y2="-1.27" width="0.127" layer="21"/>
 <text x="-2.54" y="0" size="1.27" layer="21" rot="R90">&gt;NAME</text>
 </package>
+<package name="PINLIST5_2P54">
+<pad name="P$1" x="0" y="0" drill="0.8" shape="square"/>
+<pad name="P$2" x="0" y="2.54" drill="0.8"/>
+<pad name="P$3" x="0" y="5.08" drill="0.8"/>
+<pad name="P$4" x="0" y="7.62" drill="0.8"/>
+<pad name="P$5" x="0" y="10.16" drill="0.8"/>
+<wire x1="-1.27" y1="-1.27" x2="1.27" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="1.27" y1="-1.27" x2="1.27" y2="11.43" width="0.127" layer="21"/>
+<wire x1="1.27" y1="11.43" x2="-1.27" y2="11.43" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="11.43" x2="-1.27" y2="-1.27" width="0.127" layer="21"/>
+<text x="-2.54" y="3.81" size="1.27" layer="21" rot="R90">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="USB_MICRO_AB">
@@ -6227,6 +6239,17 @@ type RDH, grid 15 mm</description>
 <wire x1="0" y1="20.32" x2="7.62" y2="20.32" width="0.254" layer="94"/>
 <text x="0" y="22.86" size="1.778" layer="94">&gt;NAME</text>
 </symbol>
+<symbol name="SPI_EXT">
+<wire x1="0" y1="15.24" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="15.24" x2="2.54" y2="15.24" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
+<pin name="CLK" x="-2.54" y="2.54" visible="pin" length="short"/>
+<pin name="MOSI" x="-2.54" y="5.08" visible="pin" length="short"/>
+<pin name="MISO" x="-2.54" y="7.62" visible="pin" length="short"/>
+<pin name="NSS" x="-2.54" y="10.16" visible="pin" length="short"/>
+<pin name="GND" x="-2.54" y="12.7" visible="pin" length="short"/>
+<text x="0" y="-2.54" size="1.27" layer="94">&gt;NAME</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="USB_MICRO_AB">
@@ -6278,6 +6301,25 @@ type RDH, grid 15 mm</description>
 <connect gate="G$1" pin="GND" pad="P$1"/>
 <connect gate="G$1" pin="VDD_3P3V" pad="P$3"/>
 <connect gate="G$1" pin="VDD_5P0V" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPI_EXT">
+<gates>
+<gate name="G$1" symbol="SPI_EXT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PINLIST5_2P54">
+<connects>
+<connect gate="G$1" pin="CLK" pad="P$1"/>
+<connect gate="G$1" pin="GND" pad="P$5"/>
+<connect gate="G$1" pin="MISO" pad="P$3"/>
+<connect gate="G$1" pin="MOSI" pad="P$2"/>
+<connect gate="G$1" pin="NSS" pad="P$4"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -6369,6 +6411,7 @@ type RDH, grid 15 mm</description>
 <part name="R8" library="resistor" deviceset="R-EU_" device="R0402" value="4k7"/>
 <part name="P2" library="connectors" deviceset="ST_LINK" device=""/>
 <part name="P3" library="connectors" deviceset="PWR3" device=""/>
+<part name="P4" library="connectors" deviceset="SPI_EXT" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6784,6 +6827,34 @@ type RDH, grid 15 mm</description>
 <label x="185.42" y="121.92" size="1.778" layer="95"/>
 </segment>
 </net>
+<net name="SPIEXT_NSS" class="0">
+<segment>
+<pinref part="U1" gate="G$3" pin="PORTB_12"/>
+<wire x1="127" y1="127" x2="116.84" y2="127" width="0.1524" layer="91"/>
+<label x="111.76" y="127" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SPIEXT_CLK" class="0">
+<segment>
+<pinref part="U1" gate="G$3" pin="PORTB_13"/>
+<wire x1="127" y1="132.08" x2="116.84" y2="132.08" width="0.1524" layer="91"/>
+<label x="111.76" y="132.08" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SPIEXT_MISO" class="0">
+<segment>
+<pinref part="U1" gate="G$3" pin="PORTB_14"/>
+<wire x1="127" y1="137.16" x2="116.84" y2="137.16" width="0.1524" layer="91"/>
+<label x="111.76" y="137.16" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SPIEXT_MOSI" class="0">
+<segment>
+<pinref part="U1" gate="G$3" pin="PORTB_15"/>
+<wire x1="127" y1="142.24" x2="116.84" y2="142.24" width="0.1524" layer="91"/>
+<label x="111.76" y="142.24" size="1.778" layer="95"/>
+</segment>
+</net>
 </nets>
 </sheet>
 <sheet>
@@ -6801,6 +6872,7 @@ type RDH, grid 15 mm</description>
 <instance part="R8" gate="G$1" x="58.42" y="149.86" rot="R90"/>
 <instance part="P2" gate="G$1" x="55.88" y="38.1"/>
 <instance part="P3" gate="G$1" x="142.24" y="132.08"/>
+<instance part="P4" gate="G$1" x="142.24" y="78.74"/>
 </instances>
 <busses>
 </busses>
@@ -6908,6 +6980,11 @@ type RDH, grid 15 mm</description>
 <wire x1="137.16" y1="137.16" x2="127" y2="137.16" width="0.1524" layer="91"/>
 <label x="127" y="137.16" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="P4" gate="G$1" pin="GND"/>
+<wire x1="139.7" y1="91.44" x2="129.54" y2="91.44" width="0.1524" layer="91"/>
+<label x="124.46" y="91.44" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SWCLK" class="0">
 <segment>
@@ -6928,6 +7005,34 @@ type RDH, grid 15 mm</description>
 <pinref part="P2" gate="G$1" pin="!RST"/>
 <wire x1="53.34" y1="40.64" x2="45.72" y2="40.64" width="0.1524" layer="91"/>
 <label x="40.64" y="40.64" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SPIEXT_CLK" class="0">
+<segment>
+<pinref part="P4" gate="G$1" pin="CLK"/>
+<wire x1="139.7" y1="81.28" x2="129.54" y2="81.28" width="0.1524" layer="91"/>
+<label x="124.46" y="81.28" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SPIEXT_MOSI" class="0">
+<segment>
+<pinref part="P4" gate="G$1" pin="MOSI"/>
+<wire x1="139.7" y1="83.82" x2="129.54" y2="83.82" width="0.1524" layer="91"/>
+<label x="124.46" y="83.82" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SPIEXT_MISO" class="0">
+<segment>
+<pinref part="P4" gate="G$1" pin="MISO"/>
+<wire x1="139.7" y1="86.36" x2="129.54" y2="86.36" width="0.1524" layer="91"/>
+<label x="124.46" y="86.36" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SPIEXT_NSS" class="0">
+<segment>
+<pinref part="P4" gate="G$1" pin="NSS"/>
+<wire x1="139.7" y1="88.9" x2="129.54" y2="88.9" width="0.1524" layer="91"/>
+<label x="124.46" y="88.9" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
