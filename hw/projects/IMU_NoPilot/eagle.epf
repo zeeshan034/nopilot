@@ -1,5 +1,5 @@
 [Eagle]
-Version="06 01 00"
+Version="06 02 00"
 Platform="Mac OS X"
 Serial="6E069B2F23-LSR-WLM-1CP"
 Globals="Globals"
@@ -7,13 +7,17 @@ Desktop="Desktop"
 
 [Globals]
 AutoSaveProject=1
-UsedLibrary="/Applications/EAGLE-6.1.0/lbr/resistor.lbr"
-UsedLibrary="/Users/kan015/Dropbox/Documents/nopilot/hw/lib/connectors.lbr"
 
 [Win_1]
+Type="Control Panel"
+Loc="271 274 1439 801"
+State=2
+Number=0
+
+[Win_2]
 Type="Schematic Editor"
 Loc="480 338 1079 737"
-State=0
+State=2
 Number=2
 File="IMU_NoPilot.sch"
 View="-5.73116 -4.10556 265.873 182.968"
@@ -48,15 +52,10 @@ ArcDirection=0
 AddLevel=2
 PadsSameType=0
 Layer=91
+Views=" 1: -5.73116 -4.10556 265.873 182.968"
 Sheet=1
 
-[Win_2]
-Type="Control Panel"
-Loc="271 274 1439 801"
-State=2
-Number=0
-
 [Desktop]
-Screen="3840 1200"
+Screen="1440 900"
 Window="Win_1"
 Window="Win_2"
