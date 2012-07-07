@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -7531,6 +7531,18 @@ type RDH, grid 15 mm</description>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,5,104.14,71.12,U3,VSS,GND,,,"/>
+<approved hash="104,5,104.14,91.44,U3,CAP,N$10,,,"/>
+<approved hash="104,5,104.14,81.28,U3,VDD_IO,VDD,,,"/>
+<approved hash="104,6,114.3,88.9,U4,VSS,GND,,,"/>
+<approved hash="104,6,114.3,93.98,U4,VDD_IO,VDD,,,"/>
+<approved hash="104,6,114.3,109.22,U4,CAP,N$11,,,"/>
+<approved hash="206,5,104.14,111.76,SPI_MISO,,,,,"/>
+<approved hash="206,5,104.14,106.68,SPI_MISO,,,,,"/>
+<approved hash="115,1,52.4668,120.65,C8,,,,,"/>
+<approved hash="115,1,34.6868,120.65,C7,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
