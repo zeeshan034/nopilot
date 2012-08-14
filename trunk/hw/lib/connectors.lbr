@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -629,6 +629,14 @@
 <wire x1="-1.27" y1="6.35" x2="-1.27" y2="-1.27" width="0.127" layer="21"/>
 <text x="-2.54" y="0" size="1.27" layer="25" rot="R90">&gt;NAME</text>
 </package>
+<package name="3PH_SJ">
+<pad name="A" x="0" y="0" drill="1.5" diameter="3"/>
+<pad name="B" x="5" y="0" drill="1.5" diameter="3"/>
+<pad name="C" x="10" y="0" drill="1.5" diameter="3"/>
+<text x="-0.5" y="-3.5" size="1.27" layer="21">A</text>
+<text x="4.5" y="-3.5" size="1.27" layer="21">B</text>
+<text x="9.5" y="-3.5" size="1.27" layer="21">C</text>
+</package>
 </packages>
 <symbols>
 <symbol name="HRS-DF12-3.0-40">
@@ -956,6 +964,15 @@
 <pin name="NSS" x="-2.54" y="10.16" visible="pin" length="short"/>
 <pin name="GND" x="-2.54" y="12.7" visible="pin" length="short"/>
 <text x="0" y="-2.54" size="1.27" layer="94">&gt;NAME</text>
+</symbol>
+<symbol name="3PH_SJ">
+<pin name="C" x="0" y="0" length="middle"/>
+<pin name="A" x="0" y="10.16" length="middle"/>
+<pin name="B" x="0" y="5.08" length="middle"/>
+<wire x1="5.08" y1="15.24" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="12.7" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="15.24" x2="12.7" y2="15.24" width="0.254" layer="94"/>
+<text x="5.08" y="17.78" size="1.778" layer="94">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1484,6 +1501,23 @@
 <connect gate="G$1" pin="MISO" pad="P$3"/>
 <connect gate="G$1" pin="MOSI" pad="P$2"/>
 <connect gate="G$1" pin="NSS" pad="P$4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="3PH_SJ">
+<gates>
+<gate name="G$1" symbol="3PH_SJ" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="3PH_SJ">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
