@@ -1,0 +1,1 @@
+Autopilot and IMU for DIY drones based on STM32F4 micro controllers. This is certainly something that has been done over and over, but not by us.
